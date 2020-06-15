@@ -68,7 +68,7 @@ function inning(){
     
 
 }
- console.log(inning());
+ //console.log(inning());
 
 /* Task 3: finalScore()
 
@@ -85,11 +85,17 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(cb, rounds){
+  let homeSum = 0
+  let awaySum = 0
+for (let i = 0; i < rounds; i++){
+ homeSum += (cb()*1)
+ awaySum += (cb()*1)
 }
+return { "Home": homeSum,
+         "Away": awaySum}
+}
+//console.log(finalScore(inning, 9))
 
 /* Task 4: 
 
@@ -112,8 +118,14 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(scb) {
+  for(let i = 0; i < round; i++){
+    round = `${round} + nd`
+    return `${round} "inning": ${scb}`
+  }
+  
+  
 }
 
+console.log(scoreboard(finalScore(inning, 9)))
 
