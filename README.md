@@ -9,8 +9,9 @@ The module challenge is the afternoon project or assignment that students work t
 ## Objectives
 
 - Explain function scope
+it means that functions nested inside the function have access up but info stored in those functions can't be accessed from outside 
 - Describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript  
-
+closures are ends of functions that prevent info from being used by function above them,
 ## Introduction
 
 This challenge focuses on both scope and closures.
