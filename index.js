@@ -118,14 +118,19 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(scb) {
-  for(let i = 0; i < round; i++){
-    round = `${round} + nd`
-    return `${round} "inning": ${scb}`
+function scoreboard(callback, rounds) {
+  let homeRuns = 0
+  let awayRuns = 0
+  let innings = []
+  for(let i = 0; i < rounds; i++){
+    homeRuns += callback()
+    awayRuns += callback()
+    innings.push(`${i +1}th inning: ${homeRuns} - ${awayRuns}`) 
   }
   
-  
+  innings.push(`Final Score: ${homeRuns} - ${awayRuns}`)
+  return innings
 }
 
-console.log(scoreboard(finalScore(inning, 9)))
+console.log(scoreboard(inning, 9))
 
